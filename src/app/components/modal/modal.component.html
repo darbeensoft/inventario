@@ -1,0 +1,29 @@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+      <div class="modal-content rounded-0">
+          <div class="modal-header border-0">
+          </div>
+          <div class="modal-body">
+              <div class="text-center">
+                  <div class="d-flex justify-content-center pb-2">
+                      <div class="check-container d-flex justify-content-center align-items-center rounded-pill">
+                          <img class="iconheight" src="{{productoDetalle?.imagenUrl}}" alt="check-lg">
+                      </div>
+                  </div>
+                  <h1 class="fw-bold">{{productoDetalle?.nombre}}</h1>
+                  <p class="fw-light">Descripcion: {{productoDetalle?.descripcion}}</p><p></p>
+                  <p class="fw-light">Precio Compra: {{productoDetalle?.precio_compra}}</p>
+                  <p class="fw-light">Precio Venta: {{productoDetalle?.precio_venta}}</p>
+                  <p class="fw-light">Stock: {{productoDetalle?.stock}}</p>
+
+              </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-center footer-color rounded-0 position-relative">
+              <div class="angle "></div>
+              <div class="text-center p-4 ">
+                  <button type="button" class="btn shadow-none footer-btn text-white rounded-0 px-5" data-bs-dismiss="modal">Salir</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

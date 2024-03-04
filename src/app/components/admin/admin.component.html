@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+  <div class="container">
+    <a class="navbar-brand">Inicio</a>
+    <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+      aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/admin" routerLinkActive="active" aria-current="page">Productos <span
+              class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/login" class="nav-link" data-bs-toggle="modal">Cerrar Sesion</a>
+        </li>
+      </ul>
+      <form class="d-flex my-2 my-lg-0" [formGroup]="form" (ngSubmit)="cargarProductoPorId()">
+        <input class="form-control me-sm-2" type="text" placeholder="Buscar" formControlName="productId" />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Buscar
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="container" *ngIf="!productoSeleccionado">
+    <div class="row">
+      <div *ngFor="let item of productos" class="col-md-4 mb-3">
+        <div class="card">
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <img [src]="item.imagenUrl" class="card-img-top" alt="Product Image" />
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ item.nombre }}</h5>
+            <!-- <p class="card-text">{{item.descripcion}}</p> -->
+            <!-- <p class="card-text">Categoría: {{item.categoria.join(', ')}}</p> -->
+            <p class="card-text">Precio: ${{ item.precio_venta }}</p>
+            <!-- <p class="card-text">Stock: {{item.stock}}</p> -->
+            <button class="btn shadow-none footer-btn text-white rounded-0 px-5" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop" (click)="mostrarDetalles(item)">
+              Detalles
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUSCAR POR FILTRO -->
+
+  <div class="container" *ngIf="productoSeleccionado">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <img [src]="productoSeleccionado.imagenUrl" class="card-img-top" alt="Product Image" />
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ productoSeleccionado.nombre }}</h5>
+            <!-- <p class="card-text">{{item.descripcion}}</p> -->
+            <!-- <p class="card-text">Categoría: {{item.categoria.join(', ')}}</p> -->
+            <p class="card-text">
+              Precio: ${{ productoSeleccionado.precio_venta }}
+            </p>
+            <!-- <p class="card-text">Stock: {{item.stock}}</p> -->
+            <button class="btn shadow-none footer-btn text-white rounded-0 px-5" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop" (click)="mostrarDetalles(productoSeleccionado)">
+              Detalles
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-modal [productoDetalle]="productoDetalle"></app-modal>
+</div>

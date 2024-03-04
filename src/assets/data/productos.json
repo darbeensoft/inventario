@@ -1,0 +1,92 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Xiaomi redmi note 7",
+      "descripcion": "rojo",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 100,
+      "precio_compra": 70,
+      "stock": 110
+    },
+    {
+      "id": "2",
+      "nombre": "Samsung Galaxy S21",
+      "descripcion": "negro",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 120,
+      "precio_compra": 90,
+      "stock": 80
+    },
+    {
+      "id": "3",
+      "nombre": "Apple iPhone 13",
+      "descripcion": "blanco",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 150,
+      "precio_compra": 110,
+      "stock": 60
+    },
+    {
+      "id": "4",
+      "nombre": "Huawei P40 Pro",
+      "descripcion": "azul",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 110,
+      "precio_compra": 80,
+      "stock": 90
+    },
+    {
+      "id": "5",
+      "nombre": "Sony PlayStation 5",
+      "descripcion": "blanca",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 500,
+      "precio_compra": 400,
+      "stock": 75
+    },
+    {
+      "id": "6",
+      "nombre": "Dell Inspiron 15",
+      "descripcion": "plateada",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 800,
+      "precio_compra": 650,
+      "stock": 50
+    },
+    {
+      "id": "7",
+      "nombre": "Canon EOS R5",
+      "descripcion": "negra",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 3000,
+      "precio_compra": 2500,
+      "stock": 40
+    },
+    {
+      "id": "8",
+      "nombre": "LG OLED CX 55",
+      "descripcion": "curva",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 2000,
+      "precio_compra": 1600,
+      "stock": 65
+    },
+    {
+      "id": "9",
+      "nombre": "Bose SoundLink Revolve",
+      "descripcion": "altavoz bluetooth",
+      "imagenUrl": "assets/img/productos/celulares/1.jpg",
+      "precio_venta": 250,
+      "precio_compra": 200,
+      "stock": 85
+    }
+  ],
+  "usuario": [
+    {
+      "id": "1",
+      "usuario": "admin",
+      "password": 123
+    }
+  ]
+}

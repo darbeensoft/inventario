@@ -1,0 +1,25 @@
+<form  (submit)="login()" >
+	<div class="container d-flex justify-content-center p-5">
+	  <div class="d-flex flex-column justify-content-between">
+		<div class="card mt-3 p-5">
+		  <div>
+			<h4 class="subtitulo">Test Inventario</h4>
+		  </div>
+		</div>
+		<div class="card two bg-white px-5 py-4 mb-3">
+		  <div class="form-group">
+			<input [(ngModel)]="usuario" type="text" class="form-control" id="mail" name="usuario">
+			<label class="form-control-placeholder" for="mail">Usuario</label>
+		  </div>
+		  <div class="form-group">
+			<input [(ngModel)]="password" type="password" class="form-control" id="password" name="password">
+			<label class="form-control-placeholder" for="password">Contraseña</label>
+		  </div>
+		  <button  type="submit" class="btn btn-primary btn-block btn-lg mt-1 mb-2">
+			<span class="btn__ingresar">Ingresar<i class="fas fa-long-arrow-alt-right ml-2"></i></span>
+		  </button>
+		</div>
+	  </div>
+	</div>
+  </form>
+  
